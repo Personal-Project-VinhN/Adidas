@@ -1,0 +1,20 @@
+{
+    "/js/backend.js": "/js/backend.js",
+    "/js/frontend.js": "/js/frontend.js",
+    "/css/frontend.css": "/css/frontend.css",
+    "/css/backend.css": "/css/backend.css",
+    "/js/manifest.js": "/js/manifest.js",
+    "/js/vendor.js": "/js/vendor.js",
+    "/js/adidas/easing.js": "/js/adidas/easing.js",
+    "/js/adidas/jquery.etalage.min.js": "/js/adidas/jquery.etalage.min.js",
+    "/js/adidas/jquery.flexisel.js": "/js/adidas/jquery.flexisel.js",
+    "/js/adidas/jquery.jscrollpane.min.js": "/js/adidas/jquery.jscrollpane.min.js",
+    "/js/adidas/jquery.min.js": "/js/adidas/jquery.min.js",
+    "/js/adidas/jquery.wmuSlider.js": "/js/adidas/jquery.wmuSlider.js",
+    "/js/adidas/megamenu.js": "/js/adidas/megamenu.js",
+    "/js/adidas/move-top.js": "/js/adidas/move-top.js",
+    "/css/adidas/etalage.css": "/css/adidas/etalage.css",
+    "/css/adidas/form.css": "/css/adidas/form.css",
+    "/css/adidas/megamenu.css": "/css/adidas/megamenu.css",
+    "/css/adidas/style.css": "/css/adidas/style.css"
+}
