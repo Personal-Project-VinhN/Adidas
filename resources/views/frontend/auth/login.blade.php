@@ -29,47 +29,53 @@
 </head>
 <body>
 
+
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url({{ asset('img/login/bg-01.jpg')}});">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<x-forms.post class="login100-form validate-form" :action="route('frontend.auth.login')">
 					<span class="login100-form-logo">
-						<i class="zmdi zmdi-landscape"></i>
+                        <i class="zmdi zmdi-landscape"></i>
 					</span>
 
 					<span class="login100-form-title p-b-34 p-t-27">
-						Log in
+                        @lang('Login')
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input100" type="text" name="username" placeholder="Username">
+						<input class="input100" type="email" name="email" id="email" class="form-control" placeholder="{{ __('E-mail Address') }}" value="{{ old('email') }}" maxlength="255" required autofocus autocomplete="email">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100" type="password" name="password" id="password" class="form-control" placeholder="{{ __('Password') }}" maxlength="100" required autocomplete="current-password">
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
-
+                    @if(isset($errors) && $errors->any())
+                        @foreach($errors->all() as $error)
+                            {{ $error }}<br/> <br />
+                        @endforeach
+                    @endif
 					<div class="contact100-form-checkbox">
-						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-						<label class="label-checkbox100" for="ckb1">
+						<input class="input-checkbox100" id="remember" name="remember" class="form-check-input" type="checkbox" {{ old('remember') ? 'checked' : '' }}>
+						<label class="label-checkbox100" for="remember">
 							Remember me
 						</label>
 					</div>
-
+                    @if(config('boilerplate.access.captcha.login'))
+                        <div class="row">
+                            <div class="col">
+                                @captcha
+                                <input type="hidden" name="captcha_status" value="true" />
+                            </div><!--col-->
+                        </div><!--row-->
+                    @endif
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Login
+                            @lang('Login')
 						</button>
 					</div>
-
-					<div class="text-center p-t-90">
-						<a class="txt1" href="#">
-							Forgot Password?
-						</a>
-					</div>
-				</form>
+				</x-forms.post>
 			</div>
 		</div>
 	</div>
