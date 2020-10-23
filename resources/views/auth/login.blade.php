@@ -28,8 +28,6 @@
 <!--===============================================================================================-->
 </head>
 <body>
-
-
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url({{ asset('img/login/bg-01.jpg')}});">
 			<div class="wrap-login100">
